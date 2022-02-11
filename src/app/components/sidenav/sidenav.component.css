@@ -1,5 +1,21 @@
 @import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css");
+#sidenav{
+    background-color:#334257;
+   
+}
+.activo{
+    background-color: #92A9BD;
+}
+.navigationLink{
+     color: #548CA8;
+}
+.nav-link:focus{
+    color:#548CA8;
+}
+.nav-link:hover{
+    background-color: #92A9BD;
 
+}
 span{
     font-size: 1.5vw;
 }
@@ -16,20 +32,4 @@ span{
     font-size: 25px;
 }
 
-@media (min-width: 916px){
-    .large{
-        display: auto;
-    }
-    .small{
-        display: none;
-    }
-}
-@media (max-width: 916px){
-    .large{
-        display: none;
-    }
-    .small{
-        display: auto;
-    }
-}
 

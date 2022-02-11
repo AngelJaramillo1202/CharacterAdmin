@@ -1,105 +1,80 @@
 
-<div class="container position-absolute p-0" style="max-height:  100vh; border: none; box-shadow: 0; max-width: 220px;">
-      <div class="header pt-1 p-0 m-0" id="" style="height: 15vh; width: 220px;">
-        <div mat-list-item href="/" class="container-fluid pb-3 mb-3 align-content-center  link-dark text-decoration-none" 
+<div id="sidenav" class="container position-absolute p-0" style="height:  100vh; border: none; box-shadow: 0; max-width: 220px;">
+      <div class="header pt-3 pb-1 p-0 m-0" id="" style="height: 15vh; width: 220px;">
+        <div mat-list-item href="/" class="container-fluid pb-3 mb-3 align-content-center text-decoration-none" 
         style="user-select: auto; margin-top: 2vh; width: 220px;">
-          <div class="row align-items-center text-center" style="width: 15vw;">
-            <div class="col-4"></div>
-            <div class=" col-6 bi p-0 m-0 logo align-items-center" style="user-select: auto; text-align: center;">
-                <a class="navbar-brand" href="#"><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" class="bi bi-bug" viewBox="0 0 16 16">
-                <path d="M4.355.522a.5.5 0 0 1 .623.333l.291.956A4.979 4.979 0 0 1 8 1c1.007 0 1.946.298 2.731.811l.29-.956a.5.5 0 1 1 .957.29l-.41 1.352A4.985 4.985 0 0 1 13 6h.5a.5.5 0 0 0 .5-.5V5a.5.5 0 0 1 1 0v.5A1.5 1.5 0 0 1 13.5 7H13v1h1.5a.5.5 0 0 1 0 1H13v1h.5a1.5 1.5 0 0 1 1.5 1.5v.5a.5.5 0 1 1-1 0v-.5a.5.5 0 0 0-.5-.5H13a5 5 0 0 1-10 0h-.5a.5.5 0 0 0-.5.5v.5a.5.5 0 1 1-1 0v-.5A1.5 1.5 0 0 1 2.5 10H3V9H1.5a.5.5 0 0 1 0-1H3V7h-.5A1.5 1.5 0 0 1 1 5.5V5a.5.5 0 0 1 1 0v.5a.5.5 0 0 0 .5.5H3c0-1.364.547-2.601 1.432-3.503l-.41-1.352a.5.5 0 0 1 .333-.623zM4 7v4a4 4 0 0 0 3.5 3.97V7H4zm4.5 0v7.97A4 4 0 0 0 12 11V7H8.5zM12 6a3.989 3.989 0 0 0-1.334-2.982A3.983 3.983 0 0 0 8 2a3.983 3.983 0 0 0-2.667 1.018A3.989 3.989 0 0 0 4 6h8z"/>
-                </svg></a>
+          <div class="row align-items-center text-center" style="width: 220px;">
+            <div class=" col-12 bi p-0 logo align-items-center" style="user-select: auto; text-align: center;">
+                <p class="navbar-brand m-auto" href="#"><img src="../../../assets/media/icons/logo.ico" style="width: 70px;" ></p>
             </div>
-            <div class="col-3"></div>
-            </div>
-            <div class="row align-content-center m-0 p-0 justify-content-center mt-2" style="max-width: 15vw;">
-              <span class="col-auto fw-semibold text-dark " style="user-select: auto; font-size: 20px; margin:  0;  
-              font-family:Georgia, 'Times New Roman', Times, serif">Admin</span>
-            </div>
+          </div>
         </div>
-          <hr style="user-select: auto; margin-top: 0; size: 3px; border-radius: 5px;">
       </div>
-      <div class="body" style="height: 45vh; width: 220px;">
+      <div class="body" style="height: 65vh; width: 220px;">
+      <hr style="user-select: auto; margin-bottom: 20px; size: 3px; border-radius: 5px;">
       <ul class="nav nav-pills flex-column mb-auto">
         <li class="nav-item container-fluid p-0">
-          <a class="nav-link row text-center activo" aria-current="page" [routerLink]="['Inicio']">
+          <a class="home nav-link row text-center activo" aria-current="page" [routerLink]="['Inicio']" (click)="activo(1);">
 
-            <div class="input-group input-group-sm mb-3 large">
-              <input type="text" class="form-control text-center" aria-label="Home" 
+            <div class="input-group input-group-sm  large">
+              <input type="text" class="form-control text-center navigationLink" aria-label="Home" 
               aria-describedby="inputGroup-sizing-sm" value="Home" disabled="true" id="NavItemInputText">
               <div class="input-group-prepend">
-                <i class="bi bi-house-fill" style="font-size: 40px;"></i>
+                <i class="bi bi-house-fill navigationLink" style="font-size: 40px;"></i>
               </div>
-            </div>
-
-            <div class="col-auto text-center small">
-              <span class="col-xs-10">Home</span>
-              <i class="bi bi-house-fill" style="font-size: 40px;"></i>
             </div>
             
           </a>
         </li>
         <li class="nav-item container-fluid p-0">
-          <a class="nav-link row text-center" [routerLink]="['']">
+          <a class="secciones nav-link row text-center" (onclick)="activo(2);" [routerLink]="['']" (click)="activo(2);">
 
-            <div class="input-group input-group-sm mb-3 large">
-              <input type="text" class="form-control text-center" aria-label="Secciones" 
+            <div class="input-group input-group-sm  large ">
+              <input type="text" class="form-control text-center navigationLink" aria-label="Secciones" 
               aria-describedby="inputGroup-sizing-sm" value="Secciones" disabled="true" id="NavItemInputText">
               <div class="input-group-prepend">
-                <i class="bi bi-grid-1x2-fill col-xs-2" style="font-size: 40px;"></i>
+                <i class="bi bi-grid-1x2-fill col-xs-2 navigationLink" style="font-size: 40px;"></i>
               </div>
             </div>
 
-
-            <div class="col-auto text-center small">
-              <span class="col-xs-10">Secciones</span>
-              <i class="bi bi-grid-1x2-fill col-xs-2" style="font-size: 40px;"></i>
-            </div>
           </a>
         </li>
         <li class="nav-item container-fluid p-0">
-          <a class="nav-link row text-center" [routerLink]="['']">
+          <a class="personajes nav-link row text-center" [routerLink]="['']" (click)="activo(3);">
 
-            <div class="input-group input-group-sm mb-3 large">
-              <input type="text" class="form-control text-center" aria-label="Personajes" 
-              aria-describedby="inputGroup-sizing-sm" value="Personajes" disabled="true" id="NavItemInputText"
+            <div class="input-group input-group-sm  large">
+              <input type="text" class="form-control text-center navigationLink" aria-label="Personajes" 
+              aria-describedby="inputGroup-sizing-sm " value="Personajes" disabled="true" id="NavItemInputText"
               style="font-size: 25px;"
               >
               <div class="input-group-prepend">
-                <i class="bi bi-people-fill col-xs-3" style="font-size: 40px;"></i>
+                <i class="bi bi-people-fill col-xs-3 navigationLink" style="font-size: 40px;"></i>
               </div>
-            </div>
-            <div class="col-auto text-center small">
-              <span class="col-xs-10">Personajes </span>
-              <i class="bi bi-people-fill col-xs-3" style="font-size: 40px"></i>
             </div>
 
           </a>
         </li>
         <li class="nav-item container-fluid p-0">
-          <a class="nav-link row text-center" [routerLink]="['']"
+          <a class="buscar nav-link row text-center" [routerLink]="['']" (click)="activo(4);"
           data-bs-toggle="collapse" data-bs-target="#est-collapse" aria-expanded="false" 
           >
-          <div class="input-group input-group-sm mb-3 large">
-            <input type="text" class="form-control text-center" aria-label="Buscar" 
+          <div class="input-group input-group-sm  large ">
+            <input type="text" class="form-control text-center navigationLink" aria-label="Buscar" 
             aria-describedby="inputGroup-sizing-sm" value="Buscar" disabled="true" id="NavItemInputText">
             <div class="input-group-prepend">
-              <i class="bi bi-search col-xs-3 " style="font-size: 40px;"></i>
+              <i class="bi bi-search col-xs-3 navigationLink" style="font-size: 40px;"></i>
             </div>
           </div>
-          <div class="col-auto text-center small">
-            <span class="col-xs-10">Buscar </span>
-            <i class="bi bi-search col-xs-3 " style="font-size: 40px;"></i>
-          </div>
+
           </a>          
           <div class="collapse row" id="est-collapse" style="user-select: auto;">
             <form class="d-block">
-              <div class="input-group mb-3">
+              <div class="input-group ">
                 <div class="input-group-prepend">
                   <button class="btn" type="button">
-                  <i class="bi bi-search" style="font-size: 20px"></i></button>
+                  <i class="bi bi-search" style="font-size: 20px; color: #EEEEEE;"></i></button>
                 </div>
-                  <input class="form-control me-2" type="text" placeholder="Buscar Personaje" aria-label="Search"
+                  <input class="form-control me-2 navigationLink" type="text" placeholder="Buscar Personaje" style="background-color: #476072;" aria-label="Search"
                   #buscarTexto>
               </div>
             </form>
@@ -113,12 +88,15 @@
         <ul class="nav nav-pills flex-column mb-auto" style="user-select: auto;">
           <li class="nav-item container-fluid p-0" style="user-select: auto;">
     
-            <a href="#" class="nav-link p-0" style="user-select: auto;">
+            <a href="#" class="nav-link row text-center" style="user-select: auto;">
 
-            <div class="text-center row w-100 m-0">
-              <span class="col-8 m-0 p-0">Log out</span>
-              <i class="bi bi-person-x-fill col-3 p-0 pe-1" style="font-size: 40px;"></i>
+          <div class="input-group input-group-sm ">
+            <input type="text" class="form-control text-center navigationLink" aria-label="LogOut" 
+            aria-describedby="inputGroup-sizing-sm" value="LogOut" disabled="true" id="NavItemInputText">
+            <div class="input-group-prepend">
+              <i class="bi bi-person-x-fill col-3 p-0 pe-1 navigationLink" style="font-size: 40px;"></i>
             </div>
+          </div>
 
             </a>
           </li>

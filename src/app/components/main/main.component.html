@@ -3,15 +3,48 @@
 
 <mat-sidenav-container class="" (backdropClick)="close()" style="min-height: 100vh; width: 100vw; overflow: hidden;">
   <mat-sidenav #sidenav mode="over" (keydown.escape)="close()"
-   style="min-height: 98vh; width: 220px; border:none; overflow: hidden; ">
+   style="min-height: 100vh; width: 220px; border:none; overflow: hidden; ">
     <app-sidenav></app-sidenav>
   </mat-sidenav>
   <mat-sidenav-content  style="min-height: 100vh; width: 100vw; overflow: hidden;" (keydown.escape)="sidenav.toggle();">
 
     <div class="container-fluid p-0" style="height: 100%;">
       <div class="row-cols-auto m-0" style="max-width: 100vw;">
-        <div class="col-1 bg-dark" style="width: 4vw; height: 100vh; overflow: hidden;">
-
+        <div class="col-1 bg-dark sidebarMini" style="width: 60px; height: 100vh; overflow: hidden;">
+          <div class="header" style="height: 70px;"></div>
+          <div class="container-fluid p-0 m-0">
+            <hr style="user-select: auto; margin-bottom: 20px; size: 3px; border-radius: 5px;">
+            <ul class="nav nav-pills flex-column mb-auto" style="user-select: auto;">
+              <li class="nav-item container-fluid p-0" style="user-select: auto;">
+                <a class="home nav-link row text-center activo p-2" aria-current="page" [routerLink]="['Inicio']" (click)="activo(1);">
+                  <div class="col-12">
+                    <i class="bi bi-house-fill navigationLink" style="font-size: 40px;"></i>
+                  </div>
+                </a>
+              </li>
+              <li class="nav-item container-fluid p-0" style="user-select: auto;">
+                <a class="secciones nav-link row text-center p-2" aria-current="page" [routerLink]="['Inicio']" (click)="activo(2);">
+                  <div class="col-12">
+                    <i class="bi bi-grid-1x2-fill col-xs-2 navigationLink" style="font-size: 40px;"></i>
+                  </div>
+                </a>
+              </li>
+              <li class="nav-item container-fluid p-0" style="user-select: auto;">
+                <a class="personajes nav-link row text-center p-2" aria-current="page" [routerLink]="['Inicio']" (click)="activo(3);">
+                  <div class="col-12">
+                    <i class="bi bi-people-fill col-xs-3 navigationLink" style="font-size: 40px;"></i>
+                  </div>
+                </a>
+              </li>
+              <li class="nav-item container-fluid p-0" style="user-select: auto;">
+                <a class="buscar nav-link row text-center  p-2" aria-current="page" [routerLink]="['Inicio']" (click)="activo(4);">
+                  <div class="col-12">
+                    <i class="bi bi-search col-xs-3 navigationLink" style="font-size: 40px;"></i>
+                  </div>
+                </a>
+              </li>
+            </ul>
+          </div>
         </div>
         <div class="col-11">
 

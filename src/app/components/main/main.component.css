@@ -14,8 +14,8 @@ mat-sidenav-container{
   top: 0px;  
   z-index: 999;
   display: block;
-    width: 4vw;
-    height: 4vw;
+    width: 60px;
+    height: 60px;
   margin-left: 0;
   border: none;
   background-color: #FFFFFF;
@@ -56,7 +56,7 @@ mat-sidenav-container{
 .hamburger.is-open .hamb-bottom {
   position: absolute;
   left: 0;
-  height: 0.5vw;
+  height: 6px;
   margin-left: 0.8vw;
   width: 60%;
   border-radius: 5%;
@@ -108,7 +108,7 @@ mat-sidenav-container{
   -webkit-transition: -webkit-transform .2s cubic-bezier(.73,1,.28,.08);
 }
 .hamburger.is-open{
-  transform: translateX(15vw);
+  transform: translateX(220px);
   transition: .52s cubic-bezier(0.33, .9, 0.09, 1);
 }
 .closingAnimation{

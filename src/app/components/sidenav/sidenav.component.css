@@ -7,10 +7,13 @@ span{
     background-color: transparent;
     border: none;
     border-radius: none;
-    font-size: 1.5vw;
+    font-size: 25px;
 }
 #NavItemInputText:disabled{
     background-color: transparent;
+}
+span{
+    font-size: 25px;
 }
 
 @media (min-width: 916px){

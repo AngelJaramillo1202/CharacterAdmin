@@ -5,7 +5,7 @@ mat-sidenav-container{
     min-height: 98vh;
 }
 *{
-    overflow: auto;
+    overflow: none;
 }
 
 /*HAMBURGUER BTN*/
@@ -15,12 +15,12 @@ mat-sidenav-container{
   z-index: 999;
   display: block;
     width: 4vw;
-    height: 50px;
+    height: 4vw;
   margin-left: 0;
   border: none;
   background-color: #FFFFFF;
   padding: 0 0 0 0;
-  border-radius: 0 0 5px 0 ;
+  border-radius: 0 0 10% 0 ;
   box-shadow: none;
   border: none;
 }
@@ -56,8 +56,8 @@ mat-sidenav-container{
 .hamburger.is-open .hamb-bottom {
   position: absolute;
   left: 0;
-  height: 6px;
-  margin-left: 1.6vh;
+  height: 0.5vw;
+  margin-left: 0.8vw;
   width: 60%;
   border-radius: 5%;
 }
@@ -67,24 +67,25 @@ mat-sidenav-container{
   background-color: #1a1a1a;
 }
 .hamburger.is-closed .hamb-top { 
-  top: 12px; 
+  top: 25%; 
   -webkit-transition: all .35s ease-in-out;
-}
+  }
 .hamburger.is-closed .hamb-middle {
   top: 50%;
   margin-top: -2px;
 }
+
 .hamburger.is-closed .hamb-bottom {
-  bottom: 10px;  
+  bottom: 20%;  
   -webkit-transition: all .35s ease-in-out;
 }
 
 .hamburger.is-closed:hover .hamb-top {
-  top: 10px;
+  top: 20%;
   -webkit-transition: all .35s ease-in-out;
 }
 .hamburger.is-closed:hover .hamb-bottom {
-  bottom: 8px;
+  bottom: 16%;
   -webkit-transition: all .35s ease-in-out;
 }
 .hamburger.is-open .hamb-top,
@@ -107,7 +108,7 @@ mat-sidenav-container{
   -webkit-transition: -webkit-transform .2s cubic-bezier(.73,1,.28,.08);
 }
 .hamburger.is-open{
-  transform: translateX(30vh);
+  transform: translateX(15vw);
   transition: .52s cubic-bezier(0.33, .9, 0.09, 1);
 }
 .closingAnimation{

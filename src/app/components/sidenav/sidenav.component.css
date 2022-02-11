@@ -3,6 +3,9 @@
     background-color:#334257;
    
 }
+.nav-pills .nav-link{
+    border-radius:.25rem 0 0 .25rem;
+}
 .activo{
     background-color: #92A9BD;
 }
@@ -13,7 +16,8 @@
     color:#548CA8;
 }
 .nav-link:hover{
-    background-color: #92A9BD;
+    background-color: #acb5bd;
+    transition: all .3s ease-in-out;
 
 }
 span{

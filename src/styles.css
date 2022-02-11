@@ -7,10 +7,10 @@ html, body {
   overflow: hidden;
 }
 .contenedor{
-    height: 96vh;
-    margin-top: 2vh;
-    margin-bottom: 2vh;
-    background-color: rgba(245, 245, 245, 0.651);
+    height: 98vh;
+    top: 1vh;
+    position: absolute;
+    background-color: #92A9BD;
     border-radius: 10px;
     overflow: hidden;
 }

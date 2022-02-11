@@ -1,0 +1,34 @@
+
+<app-navbar></app-navbar>
+
+<mat-sidenav-container class="" (backdropClick)="close()" style="min-height: 100vh; width: 100vw; overflow: hidden;">
+  <mat-sidenav #sidenav mode="over" (keydown.escape)="close()"
+   style="min-height: 98vh; width: 15vw; border:none; overflow: hidden; ">
+    <app-sidenav></app-sidenav>
+  </mat-sidenav>
+  <mat-sidenav-content  style="min-height: 100vh; width: 100vw; overflow: hidden;" (keydown.escape)="sidenav.toggle();">
+
+    <div class="container-fluid p-0" style="height: 100%;">
+      <div class="row-cols-auto m-0" style="max-width: 100vw;">
+        <div class="col-1 bg-light" style="width: 4vw; height: 100vh; overflow: hidden;">
+
+        </div>
+        <div class="col-11">
+
+        </div>
+      </div>
+
+    </div>
+
+
+    
+  </mat-sidenav-content>
+</mat-sidenav-container>
+
+
+     <div style="border:none;"><a type="button" (click)="sidenav.toggle(); hamburger_cross()"
+    class="hamburger animated fadeInLeft is-closed closingAnimation" #btnHam data-toggle="offcanvas">
+          <span class="hamb-top"></span>
+    			<span class="hamb-middle"></span>
+				  <span class="hamb-bottom"></span>
+    </a></div>

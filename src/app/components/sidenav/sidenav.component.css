@@ -1,0 +1,32 @@
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css");
+
+span{
+    font-size: 1.5vw;
+}
+#NavItemInputText {
+    background-color: transparent;
+    border: none;
+    border-radius: none;
+    font-size: 1.5vw;
+}
+#NavItemInputText:disabled{
+    background-color: transparent;
+}
+
+@media (min-width: 916px){
+    .large{
+        display: auto;
+    }
+    .small{
+        display: none;
+    }
+}
+@media (max-width: 916px){
+    .large{
+        display: none;
+    }
+    .small{
+        display: auto;
+    }
+}
+

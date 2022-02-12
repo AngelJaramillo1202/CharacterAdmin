@@ -12,7 +12,7 @@ const routes: Routes = [
   {path: 'Personajes', component: PersonajesComponent },
   {path: 'Buscar/:termino', component: BuscarComponent },
   {path: 'Buscar', component:BuscarComponent},
-    {path: '**', pathMatch: 'full', redirectTo: 'Home'}
+    {path: '**', pathMatch: 'full', redirectTo: '/Home'}
 ];
 
 @NgModule({

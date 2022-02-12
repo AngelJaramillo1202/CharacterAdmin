@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup} from '@angular/forms';
+import { CrudService } from 'src/app/servicios/crud.service';
 import * as $ from 'jquery';
 
 @Component({
@@ -10,8 +11,11 @@ import * as $ from 'jquery';
 export class SectionsComponent implements OnInit {
 
   FormularioSecciones:FormGroup;
-
-  constructor(public Formulario:FormBuilder) { 
+  Secciones:any;
+  constructor(
+    public Formulario:FormBuilder,
+    private crudService:CrudService
+    ) { 
     this.FormularioSecciones = this.Formulario.group({
       Nombre: [''],
       Descripcion: [''],
@@ -21,11 +25,15 @@ export class SectionsComponent implements OnInit {
   }
 
   ngOnInit(): void {
+    this.crudService.ObtenerSecciones().subscribe(respuesta=>{
+      console.log(respuesta);
+      this.Secciones = respuesta;
+    })
   }
   enviarDatos():any{
-    console.log('enviando')
-    console.log(this.FormularioSecciones.value);
+    this.crudService.CrearSeccion(this.FormularioSecciones.value).subscribe();
   }
+
 
   mostrar(a:number){
     let form = $('#form');

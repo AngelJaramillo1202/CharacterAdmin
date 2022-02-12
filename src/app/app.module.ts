@@ -22,6 +22,8 @@ import { HomeComponent } from './components/home/home.component';
 
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
+import { LoginComponent } from './components/login/login.component';
+import { SignUpComponent } from './components/sign-up/sign-up.component';
 
 @NgModule({
   declarations: [
@@ -32,7 +34,9 @@ import { HttpClientModule } from '@angular/common/http';
     PersonajesComponent,
     BuscarComponent,
     NavbarComponent,
-    HomeComponent
+    HomeComponent,
+    LoginComponent,
+    SignUpComponent
   ],
   imports: [
     BrowserModule,

@@ -5,16 +5,20 @@
             <a class="nav-link text-light" (click)="mostrar(1)" style="width: 100%;">Crear Nueva Sección</a>
         </div>
     </nav>
+<div class="container-fluid pt-5 pb-5 p-0 m-0">
 
-    <div class="container-fluid pt-5 pb-5 p-0 m-0">
+<div class="container-fluid pt-1 pb-2" *ngFor="let seccion of Secciones; let i=index">
+    <div class="container-fluid  p-0 m-0">
         <div class="card text-center">
             <div class="card-header">
-                Featured
+                Seccion:
             </div>
             <div class="card-body">
-                <h5 class="card-title">Special title treatment</h5>
-                <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-                <a href="#" class="btn btn-primary">Go somewhere</a>
+                <h1 class="card-title">Nombre: {{seccion.Nombre}}</h1>
+                <h3>Descripcion: {{seccion.Descripcion}}</h3>
+                <h3>Relación: {{seccion.Relacion}}</h3>
+                <h3>Etiquetas: {{seccion.Eti}}</h3>
+                <a href="#" class="btn btn-dark">Ver más</a>
             </div>
             <div class="card-footer text-muted">
                 2 days ago
@@ -22,7 +26,9 @@
         </div>
     </div>
 
+</div>
 
+</div>
 
 </div>
 
@@ -60,7 +66,7 @@
                     </div>
 
                     <div class="btn-group" role="group" aria-label="">
-                        <button type="submit" class="btn btn-dark">Guardar</button>
+                        <button type="submit" class="btn btn-dark" (click)="mostrar(2)">Guardar</button>
                         <button type="button" class="btn btn-light" (click)="mostrar(2)">Cancelar</button>
                     </div>
 

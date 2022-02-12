@@ -1,1 +1,75 @@
-<p>sections works!</p>
+<div class="container">
+
+    <nav class="navbar justify-content-center sticky-top row"  > 
+        <div class="col-12 text-center w-100">
+            <a class="nav-link text-light" (click)="mostrar(1)" style="width: 100%;">Crear Nueva Sección</a>
+        </div>
+    </nav>
+
+    <div class="container-fluid pt-5 pb-5 p-0 m-0">
+        <div class="card text-center">
+            <div class="card-header">
+                Featured
+            </div>
+            <div class="card-body">
+                <h5 class="card-title">Special title treatment</h5>
+                <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+                <a href="#" class="btn btn-primary">Go somewhere</a>
+            </div>
+            <div class="card-footer text-muted">
+                2 days ago
+            </div>
+        </div>
+    </div>
+
+
+
+</div>
+
+
+<div id="form" class="container-fluid hidden" style="height: 98vh;
+ position: fixed; width: 100%; left: 0; top: 1vh; background-color:rgba(0, 0, 0, 0.527); overflow: scroll;">
+
+    <div class="container mt-2 pt-5 pb-5 mb-2" style="min-height: 70vh;" >
+
+        <div class="card" style="min-height: 70vh;">
+            <div class="card-header">
+                Crear una sección
+            </div>
+            <div class="card-body">
+                <form [formGroup]="FormularioSecciones" (ngSubmit)="enviarDatos()">
+
+                    <div class="mb-3">
+                      <label for="" class="form-label">Nombre:</label>
+                      <input type="text" class="form-control" name="" formControlName="Nombre" id="" aria-describedby="helpId" placeholder="Escribe el nombre de la sección">
+                    </div>
+
+                    <div class="mb-3">
+                      <label for="" class="form-label">Descripción</label>
+                      <textarea class="form-control" name="" formControlName="Descripcion" id="" rows="3"></textarea>
+                    </div>
+
+                    <div class="mb-3">
+                      <label for="" class="form-label">Relación</label>
+                      <input type="text" class="form-control" name="" formControlName="Relacion" id="" aria-describedby="helpId" placeholder="¿De qué manera están relacionados los personajes de esta sección?">
+                    </div>
+
+                    <div class="mb-3">
+                      <label for="" class="form-label">Etiquetas</label>
+                      <input type="text" class="form-control disabled" name="" formControlName="Etiquetas" id="" aria-describedby="helpId" placeholder="¿De qué trata tu sección?">
+                    </div>
+
+                    <div class="btn-group" role="group" aria-label="">
+                        <button type="submit" class="btn btn-dark">Guardar</button>
+                        <button type="button" class="btn btn-light" (click)="mostrar(2)">Cancelar</button>
+                    </div>
+
+                </form>
+            </div>
+        </div>
+
+
+    </div>
+
+
+</div>
